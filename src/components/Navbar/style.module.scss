@@ -1,0 +1,28 @@
+@import "../../_css/common.scss";
+
+.navbar {
+  color: $white;
+  font-size: 1rem;
+  margin: auto;
+  height: 60px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  div {
+    display: inline-block;
+    padding: 0.5em 1em;
+    padding-left: 0px;
+  }
+  ul {
+    list-style: none;
+    display: flex;
+    li {
+      display: inline-block;
+      padding: 0.5em 1em;
+    }
+    &:first-child {
+      padding-left: 0px;
+    }
+  }
+}

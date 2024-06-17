@@ -1,0 +1,6 @@
+@import "../_css/common.scss";
+.container {
+  max-width: $large_screen;
+  margin: auto;
+  overflow: hidden;
+}

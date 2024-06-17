@@ -1,0 +1,16 @@
+//colors
+$primary-color: #007fe4;
+$white: #fafcfd;
+
+
+//screen sizes
+$browser-context: 16;
+$mobile: 480px;
+$tablet: 769px;
+$desktop: 1025px;
+$large_screen: 1200px;
+
+:export {
+  primaryColor: $primary-color;
+  $white: #fafcfd;
+}

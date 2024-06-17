@@ -1,0 +1,45 @@
+@import "../../_css/common.scss";
+.hero_layout {
+  /* Standard syntax */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  padding-top: 60px;
+  width: 100vw;
+  background: linear-gradient(
+    356deg,
+    #00a0b5 20.83%,
+    #2070e8 64.1%,
+    #007ee5 96.35%
+  );
+  height: 45vh;
+  border-bottom-left-radius: 50vh 30px;
+  border-bottom-right-radius: 50vh 30px;
+}
+
+.hero {
+  color: $white;
+  @include flex-center;
+  h1 {
+    font-size: 2.25rem;
+  }
+  height: 270px;
+  overflow: hidden;
+}
+
+.page_heading {
+  width: max(40%, $mobile);
+}
+
+.page_heading_picture {
+  height: 262px;
+  overflow: hidden;
+  border-radius: 23% 77% 27% 73% / 97% 0% 100% 0%;
+}
+
+.hero_picture_container {
+  border-radius: 1em;
+  overflow: hidden;
+  width: max(60%, $mobile);
+}
