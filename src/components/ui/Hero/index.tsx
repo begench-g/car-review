@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "./layout";
 import classes from "./style.module.scss";
-import HeroImg from "../../../public/bmw-5-series-pair-carousel-1920x774px.jpg";
+import HeroImg from "@public/bmw-5-series-pair-carousel-1920x774px.jpg";
 import Image from "next/image";
 import BreadCrumb from "../BreadCrumb/BreadCrumb";
 

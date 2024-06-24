@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import classes from "./page.module.scss";
 import { Roboto_Mono, Ubuntu } from "next/font/google";
-import Navbar from "@/components/Navbar";
-import { relative } from "path";
+import Navbar from "../components/ui/Navbar";
 
 export const metadata: Metadata = {
   title: "Create Next App",

@@ -1,0 +1,167 @@
+"use client";
+import React, { ReactNode, useState } from "react";
+import { useContext } from "react";
+import { generateFakeCars } from "./fakeCarsGenerator";
+import { User } from "../domain/user";
+import { Car } from "../domain/car";
+
+export const StoreContext = React.createContext<any>({});
+export const useStore = () => useContext(StoreContext);
+
+export const Provider: React.FC<{ children: ReactNode }> = ({ children }) => {
+  const [user, setUser] = useState<User>();
+  const [car, setCar] = useState<Car>();
+
+  const value = {
+    user,
+    car,
+    cars: cars,
+    updateUser: setUser,
+    updateCar: setCar,
+  };
+  return (
+    <StoreContext.Provider value={value}>{children}</StoreContext.Provider>
+  );
+};
+const cars: Car[] = [
+  {
+    id: "9b4f3757-79d7-4c19-bc8c-43da8df078b6",
+    manufacturer: "Nissan",
+    model: "Altima",
+    year: 2023,
+    drivetrain: "4WD",
+    transmission: "Automatic",
+    engine_volume: 3.6,
+    images: ["https://fakeimg.pl/250x100/?text=Car87"],
+    average_price: 46679,
+    rating: 3.5,
+    review_number: 3423,
+    release_date: "2000-02-21",
+  },
+  {
+    id: "e2eb52d3-573a-45a6-bfcb-332df50fec9b",
+    manufacturer: "Chevrolet",
+    model: "Accord",
+    year: 2007,
+    drivetrain: "FWD",
+    transmission: "Automatic",
+    engine_volume: 3.5,
+    images: ["https://fakeimg.pl/250x100/?text=Car72"],
+    average_price: 79898,
+    rating: 1.2,
+    review_number: 1596,
+    release_date: "2000-04-25",
+  },
+  {
+    id: "ebd8dd0b-0b4c-4910-9ff1-d30be810f9a0",
+    manufacturer: "Ford",
+    model: "Civic",
+    year: 2014,
+    drivetrain: "FWD",
+    transmission: "Manual",
+    engine_volume: 1.6,
+    images: ["https://fakeimg.pl/250x100/?text=Car67"],
+    average_price: 80618,
+    rating: 4.6,
+    review_number: 3820,
+    release_date: "2018-03-19",
+  },
+  {
+    id: "6c13f134-a5d2-4c16-8a7b-10ba7b2da929",
+    manufacturer: "BMW",
+    model: "Civic",
+    year: 2002,
+    drivetrain: "4WD",
+    transmission: "CVT",
+    engine_volume: 1.8,
+    images: ["https://fakeimg.pl/250x100/?text=Car12"],
+    average_price: 30583,
+    rating: 1.1,
+    review_number: 4772,
+    release_date: "2020-07-18",
+  },
+  {
+    id: "2aeff5e6-9a14-4939-87b6-961cad308839",
+    manufacturer: "Nissan",
+    model: "F-150",
+    year: 2000,
+    drivetrain: "4WD",
+    transmission: "Manual",
+    engine_volume: 2.3,
+    images: ["https://fakeimg.pl/250x100/?text=Car96"],
+    average_price: 85992,
+    rating: 1.1,
+    review_number: 1447,
+    release_date: "2022-07-28",
+  },
+  {
+    id: "b630a13c-2f0a-4177-a3a8-33726bdc2703",
+    manufacturer: "Mercedes-Benz",
+    model: "E-Class",
+    year: 2017,
+    drivetrain: "4WD",
+    transmission: "Automatic",
+    engine_volume: 3.9,
+    images: ["https://fakeimg.pl/250x100/?text=Car73"],
+    average_price: 84126,
+    rating: 1.9,
+    review_number: 2434,
+    release_date: "2001-11-13",
+  },
+  {
+    id: "8682a806-dff7-4d37-8dcd-6932a54f0b7e",
+    manufacturer: "Volkswagen",
+    model: "Camry",
+    year: 2005,
+    drivetrain: "AWD",
+    transmission: "Manual",
+    engine_volume: 2.1,
+    images: ["https://fakeimg.pl/250x100/?text=Car83"],
+    average_price: 58191,
+    rating: 3.3,
+    review_number: 2588,
+    release_date: "2013-10-07",
+  },
+  {
+    id: "2463ef18-fdc6-4695-aa2e-dff1ea9f5ee8",
+    manufacturer: "Honda",
+    model: "Civic",
+    year: 2014,
+    drivetrain: "4WD",
+    transmission: "CVT",
+    engine_volume: 5.2,
+    images: ["https://fakeimg.pl/250x100/?text=Car29"],
+    average_price: 79148,
+    rating: 4.4,
+    review_number: 882,
+    release_date: "2022-01-08",
+  },
+  {
+    id: "cae806ca-a482-4b2b-a368-55547b9ba6db",
+    manufacturer: "Toyota",
+    model: "Cruze",
+    year: 2002,
+    drivetrain: "4WD",
+    transmission: "Automatic",
+    engine_volume: 3.1,
+    images: ["https://fakeimg.pl/250x100/?text=Car60"],
+    average_price: 53397,
+    rating: 3.4,
+    review_number: 131,
+    release_date: "2023-01-03",
+  },
+  {
+    id: "876b0520-1ec1-47af-aaa5-cb3c522b03e4",
+    manufacturer: "Nissan",
+    model: "3 Series",
+    year: 2020,
+    drivetrain: "4WD",
+    transmission: "CVT",
+    engine_volume: 4.3,
+    images: ["https://fakeimg.pl/250x100/?text=Car44"],
+    average_price: 29169,
+    rating: 1.2,
+    review_number: 2752,
+    release_date: "2024-06-08",
+  },
+];
