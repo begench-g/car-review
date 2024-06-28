@@ -7,7 +7,7 @@ import { Provider } from "@/src/services/store";
 const CarReview = () => {
   return (
     <div>
-      <Hero />{" "}
+      <Hero />
       <Provider>
         <CarReviewFilter />
         <Cars />

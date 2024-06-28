@@ -6,6 +6,7 @@ import { manufacturers, models, years } from "@/src/services/fakeCarsGenerator";
 import { useSelectCar } from "@/src/application/selectCar";
 import { useStore } from "@/src/services/store";
 import { Car } from "@/src/domain/car";
+
 const CarReviewFilter = () => {
   const [filter, setFilter] = useState<{
     manufacturer: string;
@@ -16,6 +17,7 @@ const CarReviewFilter = () => {
     model: "",
     year: "",
   });
+
   const { cars }: { cars: Car[] } = useStore();
   const { selectCar } = useSelectCar(cars);
   const selectedCar = selectCar(filter);
